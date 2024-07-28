@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_nana_code_challenge/data/product.dart';
-import 'package:flutter_nana_code_challenge/data/productRepository.dart';
+import 'package:flutter_nana_code_challenge/data/product_repository.dart';
 import 'product_event.dart';
 import 'product_state.dart';
 

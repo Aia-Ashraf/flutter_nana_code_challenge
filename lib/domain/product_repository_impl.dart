@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter_nana_code_challenge/data/product.dart';
 
-import 'package:flutter_nana_code_challenge/data/productRepository.dart';
+import 'package:flutter_nana_code_challenge/data/product_repository.dart';
 
 class ProductRepositoryImpl implements ProductRepository {
   final String _baseUrl = 'https://api.escuelajs.co/api/v1';

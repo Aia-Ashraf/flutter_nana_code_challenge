@@ -6,8 +6,8 @@ import 'package:flutter_nana_code_challenge/bloc/product_bloc.dart';
 import 'package:flutter_nana_code_challenge/bloc/product_event.dart';
 import 'package:flutter_nana_code_challenge/bloc/product_state.dart';
 import 'package:flutter_nana_code_challenge/data/product.dart';
-import 'package:flutter_nana_code_challenge/data/productRepository.dart';
-import 'package:flutter_nana_code_challenge/domain/productRepositoryImpl.dart';
+import 'package:flutter_nana_code_challenge/data/product_repository.dart';
+import 'package:flutter_nana_code_challenge/domain/product_repository_impl.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
