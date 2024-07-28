@@ -57,6 +57,6 @@ Closes the ProductBloc and disposes the ScrollController.
 ProductItem Class:
 Displays individual product details.
 
-![image](https://github.com/user-attachments/assets/df92b50a-0b3c-4dff-877d-74cb4a20d533)
+![Screenshot from 2024-07-28 16-08-04](https://github.com/user-attachments/assets/94bcd9d3-51c2-4d21-8289-696415c25434)
 ![Screenshot from 2024-07-28 16-04-11](https://github.com/user-attachments/assets/71815bf4-7798-4630-b71f-8647a20dfc75)
 
