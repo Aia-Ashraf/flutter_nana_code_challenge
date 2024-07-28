@@ -1,47 +1,62 @@
-# flutter_nana_code_challenge
 
-A new Flutter project.
+HomeScreen Implementation
 
-Documentation for HomeScreen Implementation
 Overview
-The HomeScreen widget displays a list of products with pagination using the flutter_bloc for state management, dio for networking, and flutter_screenutil for responsive design.
 
-Import Statements
-flutter/material.dart: Core Flutter components.
-flutter_bloc/flutter_bloc.dart: BLoC pattern components.
-dio/dio.dart: HTTP requests.
-flutter_screenutil/flutter_screenutil.dart: Responsive design.
-Various product-related BLoC and repository classes.
-HomeScreen Class
-StatefulWidget: Maintains state across rebuilds.
-State Variables
-ProductBloc _productBloc: Manages product state and events.
-List<Product> _products: Stores fetched products.
-bool _isLoading: Tracks loading state.
-int _currentPage: Current page for pagination.
-int _pageSize: Number of items per page.
-ScrollController _scrollController: Controls scroll behavior.
-initState Method
+The HomeScreen widget displays a paginated list of products. It uses flutter_bloc for state management, dio for networking, and flutter_screenutil for responsive design.
+
+
+Dependencies
+
+Add the following to your pubspec.yaml:
+dependencies:
+
+  flutter:
+  
+    sdk: flutter
+    
+  flutter_bloc: ^7.0.0
+  
+  dio: ^4.0.0
+  
+  flutter_screenutil: ^5.0.0
+  
+
+  
+Key Components
+State Variables:
+
+_productBloc: Manages product state and events.
+_products: List of fetched products.
+_isLoading: Indicates loading state.
+_currentPage: Current page number for pagination.
+_pageSize: Number of items per page.
+_scrollController: Controls scroll behavior.
+
+initState:
 Initializes the state, ProductBloc, and ScrollController.
-Fetches initial products by dispatching a FetchProducts event.
-_onScroll Method
+Fetches initial products.
+
+_onScroll:
 Detects when the user reaches the bottom of the list.
-Calls _loadNextPage to fetch more products if not loading.
-_loadProducts Method
-Dispatches FetchProducts event with the current page and size.
-Sets _isLoading to true to prevent duplicate loads.
-_loadNextPage Method
-Increments _currentPage and calls _loadProducts.
-build Method
+Triggers loading of the next page if not already loading.
+
+_loadProducts:
+Dispatches FetchProducts event to fetch products for the current page.
+_loadNextPage:
+
+Increments _currentPage and loads products for the next page.
+
+build Method:
 Sets up the BlocProvider and BlocBuilder.
-Displays a loading indicator, product grid, and error message as appropriate.
-Listens for ProductLoaded and ProductError states to update the UI.
-dispose Method
-Closes the ProductBloc and disposes of the ScrollController.
-ProductItem Class
-Stateless widget to display individual product details.
+Displays a loading indicator, product grid, or error message based on the state.
 
+dispose:
+Closes the ProductBloc and disposes the ScrollController.
 
+ProductItem Class:
+Displays individual product details.
 
-
+![image](https://github.com/user-attachments/assets/df92b50a-0b3c-4dff-877d-74cb4a20d533)
+![Screenshot from 2024-07-28 16-04-11](https://github.com/user-attachments/assets/71815bf4-7798-4630-b71f-8647a20dfc75)
 
